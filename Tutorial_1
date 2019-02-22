@@ -1,0 +1,42 @@
+Docker Containers: Another Form of Virtualization
+Think of a container as another form of virtualization. Virtual Machines (VM) allow a piece of hardware to be split up into different VMs – or virtualized — so that the hardware power can be shared among different users and appear as separate servers or machines. Containers virtualize the OS, splitting it up into virtualized compartments to run container applications.
+
+This approach allows pieces of code to be put into smaller, easily transportable pieces that can run anywhere Linux is running. It’s a way to make applications even more distributed, and strip them down into specific functions.
+
+
+Docker helps you create and deploy software within containers. It’s an open source collection of tools that help you “Build, Ship, and Run any App, Anywhere”. Yes, it really is as magic as it sounds.
+
+With Docker, you create a special file called a Dockerfile. Dockerfiles define a build process, which, when fed to the ‘docker build’ command, will produce an immutable docker image. You can think of this as a snapshot of your application, ready to be brought to life at any time. When you want to start it up, just use the ‘docker run’ command to run it anywhere the docker daemon is supported and running. It can be on your laptop, your production server in the cloud, or on a raspberry pi. Regardless of where your image is running, it will behave the same way
+
+
+Wait, Doesn’t Docker do Container Management?
+Kubernetes isn’t the only container management tool around. Docker also has its own native container management tool called Docker Swarm. It lets you deploy containers as Swarms that you can interact with as a single unit, with all the container management taken care of. To be clear, Kubernetes does not interact with Docker Swarm in any fashion, only the Docker engine itself.
+
+
+Using Docker with Kubernetes
+As previously mentioned, Docker and Kubernetes work at different levels. Under the hood, Kubernetes can integrate with the Docker engine to coordinate the scheduling and execution of Docker containers on Kubelets. The Docker engine itself is responsible for running the actual container image built by running ‘docker build’. Higher level concepts such as service-discovery, loadbalancing and network policies are handled by Kubernetes as well.
+
+When used together, both Docker and Kubernetes are great tools for developing a modern cloud architecture, but they are fundamentally different at their core. It is important to understand the high-level differences between the technologies when building your stack.
+
+Let Containership help unravel the mysteries of cloud computing for you. Regardless of where you are in your cloud journey, we can help. 
+
+
+
+In container approach one is usually limited to a single operating system, thus you cannot
+run Linux and windows together.
+
+One area where containers are weaker than VMs is isolation.
+
+
+
+****************************************************************************************************************
+
+https://docs.docker.com/docker-for-windows/
+
+https://blog.containership.io/k8svsdocker/
+
+https://www.xenonstack.com/blog/devops/docker-application-architecture-hub-images/
+
+https://www.howtoforge.com/tutorial/centos-kubernetes-docker-cluster/
+
+https://www.sdxcentral.com/cloud/containers/definitions/how-does-a-docker-container-work-explanation/
